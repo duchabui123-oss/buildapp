@@ -1,0 +1,28 @@
+{
+  "name": "bong-english",
+  "version": "1.0.0",
+  "description": "Bông & Teddy – Học tiếng Việt + tiếng Anh cho bé",
+  "author": "Bong English",
+  "main": "electron/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win portable --publish never"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/cli": "^6.2.0",
+    "@capacitor/core": "^6.2.0"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "vn.bong.english",
+    "productName": "Bong English",
+    "files": ["electron/**/*", "www/**/*", "package.json"],
+    "directories": { "output": "dist" },
+    "win": { "target": "portable", "artifactName": "BongEnglish.${ext}" }
+  }
+}
